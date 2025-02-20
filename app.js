@@ -4,7 +4,7 @@
 
 const express = require("express");
 const cors = require("cors");
-const port = require("config")
+const PORT = require("./config")
 
 const { NotFoundError } = require("./expressError");
 
@@ -17,7 +17,7 @@ const jobsRoutes = require("./routes/jobs");
 const morgan = require("morgan");
 
 const app = express();
-app.listen(+port);
+app.listen(+PORT);
 
 app.use(cors());
 app.use(express.json());
